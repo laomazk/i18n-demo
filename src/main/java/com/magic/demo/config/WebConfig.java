@@ -1,4 +1,4 @@
-package commagic.demo.config;
+package com.magic.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

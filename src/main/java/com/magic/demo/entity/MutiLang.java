@@ -1,4 +1,4 @@
-package commagic.demo.entity;
+package com.magic.demo.entity;
 
 
 import lombok.Getter;

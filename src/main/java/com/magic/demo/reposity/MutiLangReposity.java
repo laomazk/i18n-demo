@@ -1,6 +1,6 @@
-package commagic.demo.reposity;
+package com.magic.demo.reposity;
 
-import commagic.demo.entity.MutiLang;
+import com.magic.demo.entity.MutiLang;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MutiLangReposity extends JpaRepository<MutiLang,Integer> {

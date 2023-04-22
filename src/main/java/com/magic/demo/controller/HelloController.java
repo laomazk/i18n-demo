@@ -1,9 +1,9 @@
-package commagic.demo.controller;
+package com.magic.demo.controller;
 
-import commagic.demo.component.MyMessageComponent;
-import commagic.demo.component.MyMessageSource;
-import commagic.demo.entity.MutiLang;
-import commagic.demo.reposity.MutiLangReposity;
+import com.magic.demo.entity.Greet;
+import com.magic.demo.entity.MutiLang;
+import com.magic.demo.reposity.MutiLangReposity;
+import com.magic.demo.component.MyMessageComponent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
@@ -32,5 +32,13 @@ public class HelloController {
     @GetMapping("reload")
     public void init(){
         myMessageComponent.reload();
+    }
+
+    @GetMapping("greet")
+    public Greet greet(){
+        Greet greet = new Greet();
+        greet.setId(1);
+        greet.setDesc("你好");
+        return greet;
     }
 }

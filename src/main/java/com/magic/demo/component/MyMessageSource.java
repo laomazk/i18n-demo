@@ -1,12 +1,10 @@
-package commagic.demo.component;
+package com.magic.demo.component;
 
 import cn.hutool.core.collection.CollUtil;
-import cn.hutool.core.map.MapUtil;
-import commagic.demo.entity.MutiLang;
-import commagic.demo.reposity.MutiLangReposity;
+import com.magic.demo.entity.MutiLang;
+import com.magic.demo.reposity.MutiLangReposity;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.support.AbstractMessageSource;
 import org.springframework.core.io.ResourceLoader;
@@ -14,10 +12,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.text.MessageFormat;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @RequiredArgsConstructor
@@ -44,7 +39,7 @@ public class MyMessageSource extends AbstractMessageSource implements ResourceLo
             LOCAL_CACHE.put("zh", zhCnMessageResources);
             LOCAL_CACHE.put("en", enUsMessageResources);
         }
-        return MapUtil.empty();
+        return Collections.emptyMap();
     }
 
     public String getSourceFromCache(String code, Locale locale) {

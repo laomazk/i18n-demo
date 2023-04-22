@@ -1,4 +1,4 @@
-package commagic.demo.component;
+package com.magic.demo.component;
 
 import org.springframework.stereotype.Component;
 
